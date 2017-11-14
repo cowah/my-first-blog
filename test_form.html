@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home - Cowrite</title>
+  <link rel="stylesheet" type="text/css" href="cowrite.css">
+
+  <script>
+    function show_dropdown(menu_option, dropdown) {
+      document.getElementById(menu_option).className='hover';
+      document.getElementById(dropdown).className='dropdown_show';
+    }
+
+    function hide_dropdown(menu_option, dropdown) {
+      document.getElementById(menu_option).className='default';
+      document.getElementById(dropdown).className='dropdown_hide';
+    }
+  </script>
+
+</head>
+
+<body>
+
+<h1>CoWrite</h1>
+
+<ul class='top_area'>
+  <li><a href='home.html'><img src='cowrite_logo.png' class='logo'></a></li>
+  <li class='log_sign'><a href='#signup' class='default' onmouseover="this.className='hover'" onmouseout="this.className='default'">SIGN UP</a></li>
+  <li class='log_sign'>|</li>
+  <li class='log_sign'><a href='#login' class='default' onmouseover="this.className='hover'" onmouseout="this.className='default'">LOGIN</a></li>
+</ul>
+
+
+<ul class='menu1'>
+  <li class='page_name'><a href='fanfiction.html' id='fanfic' class='default' onmouseover="show_dropdown('fanfic', 'fanfic_drop')" onmouseout="hide_dropdown('fanfic', 'fanfic_drop')" onclick="this.className='clicked'">FANFICTION</a>
+    <div id='fanfic_drop' class="dropdown_hide" onmouseover="show_dropdown('fanfic', 'fanfic_drop')" onmouseout="hide_dropdown('fanfic', 'fanfic_drop')">
+      <a href="#" class='default' onmouseover="this.className='hover'" onmouseout="this.className='default'">Anime & Manga</a>
+      <a href="#" class='default' onmouseover="this.className='hover'" onmouseout="this.className='default'">Books</a>
+      <a href="#" class='default' onmouseover="this.className='hover'" onmouseout="this.className='default'">Comics</a>
+      <a href="#" class='default' onmouseover="this.className='hover'" onmouseout="this.className='default'">Famous People</a>
+      <a href="#" class='default' onmouseover="this.className='hover'" onmouseout="this.className='default'">Games</a>
+      <a href="#" class='default' onmouseover="this.className='hover'" onmouseout="this.className='default'">Movies</a>
+      <a href="#" class='default' onmouseover="this.className='hover'" onmouseout="this.className='default'">Music & Bands</a>
+      <a href="#" class='default' onmouseover="this.className='hover'" onmouseout="this.className='default'">TV</a>
+    </div>
+  </li>
+  <li class='page_name'><a href='#blah2' class='default' id='original' onmouseover="show_dropdown('original', 'original_drop')" onmouseout="hide_dropdown('original', 'original_drop')" onclick="this.className='clicked'">ORIGINAL</a>
+    <div id='original_drop' class="dropdown_hide" onmouseover="show_dropdown('original', 'original_drop')" onmouseout="hide_dropdown('original', 'original_drop')">
+      <a href="#" class='default' onmouseover="this.className='hover'" onmouseout="this.className='default'">Action</a>
+      <a href="#" class='default' onmouseover="this.className='hover'" onmouseout="this.className='default'">Crime</a>
+      <a href="#" class='default' onmouseover="this.className='hover'" onmouseout="this.className='default'">Fantasy</a>
+      <a href="#" class='default' onmouseover="this.className='hover'" onmouseout="this.className='default'">Horror</a>
+      <a href="#" class='default' onmouseover="this.className='hover'" onmouseout="this.className='default'">Mystery</a>
+      <a href="#" class='default' onmouseover="this.className='hover'" onmouseout="this.className='default'">Romance</a>
+      <a href="#" class='default' onmouseover="this.className='hover'" onmouseout="this.className='default'">Supernatural</a>
+    </div>
+  </li>
+  <li class='page_name'><a href='#blah2' class='default' onmouseover="this.className='hover'" onmouseout="this.className='default'" onclick="this.className='clicked'">PROMPTS</a></li>
+  <li class='page_name'><a href='about.html' class='default' onmouseover="this.className='hover'" onmouseout="this.className='default'" onclick="this.className='clicked'">ABOUT</a></li>
+  <li class='page_name'><a href='#rand' class='hidden' onmouseover="this.className='hover'" onmouseout="this.className='default'" onclick="this.className='clicked'">PROFILE</a></li>
+  <li class='search'><button class='default' onmouseover="this.className='hover'" onmouseout="this.className='default'"><strong>></strong></button></li>
+  <li class='search'><input type='text' id='search_box'></li>
+</ul>
+
+<form action='action_page.php' method='post'>
+  <fieldset>
+  <legend>Create Account</legend>
+  User name: <input type='text' name='uname'> <br>
+  Password: <input type='text' name='pword'> <br>
+  Email: <input type='text' name='email'> <br>
+  <input type='submit' value='Submit'>
+  </fieldset>
+</form>
+
+</body>
+</html>
